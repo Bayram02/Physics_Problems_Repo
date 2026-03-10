@@ -1,1151 +1,305 @@
+
+
+
 Problem 1 – Vectors and Linear Transformations
 Given vectors
-𝑎
-⃗
-=
-(
-2
-,
-−
-1
-,
-3
-)
-,
-𝑏
-⃗
-=
-(
-1
-,
-4
-,
-−
-2
-)
-a
-=(2,−1,3),
-b
-=(1,4,−2)
-1. Length of vectors
-
-Vector length formula:
-
-∣
-𝑣
-⃗
-∣
-=
-𝑣
-𝑥
-2
-+
-𝑣
-𝑦
-2
-+
-𝑣
-𝑧
-2
-∣
-v
-∣=
-v
-x
-2
-	​
-
-+v
-y
-2
-	​
-
-+v
-z
-2
-	​
-
-	​
-
-Length of vector 
-𝑎
-⃗
-a
-∣
-𝑎
-⃗
-∣
-=
-2
-2
-+
-(
-−
-1
-)
-2
-+
-3
-2
-∣
-a
-∣=
-2
-2
-+(−1)
-2
-+3
-2
-	​
-
-∣
-𝑎
-⃗
-∣
-=
-4
-+
-1
-+
-9
-∣
-a
-∣=
-4+1+9
-	​
-
-∣
-𝑎
-⃗
-∣
-=
-14
-∣
-a
-∣=
-14
-	​
-
-Length of vector 
-𝑏
-⃗
-b
-∣
-𝑏
-⃗
-∣
-=
-1
-2
-+
-4
-2
-+
-(
-−
-2
-)
-2
-∣
-b
-∣=
-1
-2
-+4
-2
-+(−2)
-2
-	​
-
-∣
-𝑏
-⃗
-∣
-=
-1
-+
-16
-+
-4
-∣
-b
-∣=
-1+16+4
-	​
-
-∣
-𝑏
-⃗
-∣
-=
-21
-∣
-b
-∣=
-21
-	​
-
-2. Normalized vector
-
-Definition:
-
-𝑎
-^
-=
-𝑎
-⃗
-∣
-𝑎
-⃗
-∣
-a
-^
-=
-∣
-a
-∣
-a
-	​
-
-
-Substitute values:
-
-𝑎
-^
-=
-(
-2
-,
-−
-1
-,
-3
-)
-14
-a
-^
-=
-14
-	​
-
-(2,−1,3)
-	​
-
-
-Final result:
-
-𝑎
-^
-=
-(
-2
-14
-,
-−
-1
-14
-,
-3
-14
-)
-a
-^
-=(
-14
-	​
-
-2
-	​
-
-,
-14
-	​
-
-−1
-	​
-
-,
-14
-	​
-
-3
-	​
-
-)
-3. Dot product
-
-Formula:
-
-𝑎
-⃗
-⋅
-𝑏
-⃗
-=
-𝑎
-𝑥
-𝑏
-𝑥
-+
-𝑎
-𝑦
-𝑏
-𝑦
-+
-𝑎
-𝑧
-𝑏
-𝑧
-a
-⋅
-b
-=a
-x
-	​
-
-b
-x
-	​
-
-+a
-y
-	​
-
-b
-y
-	​
-
-+a
-z
-	​
-
-b
-z
-	​
-
-
-Substitute values:
-
-𝑎
-⃗
-⋅
-𝑏
-⃗
-=
-2
-⋅
-1
-+
-(
-−
-1
-)
-⋅
-4
-+
-3
-⋅
-(
-−
-2
-)
-a
-⋅
-b
-=2⋅1+(−1)⋅4+3⋅(−2)
-=
-2
-−
-4
-−
-6
-=2−4−6
-=
-−
-8
-=−8
-4. Angle between vectors
-
-Formula:
-
-𝑎
-⃗
-⋅
-𝑏
-⃗
-=
-∣
-𝑎
-⃗
-∣
-∣
-𝑏
-⃗
-∣
-cos
-⁡
-𝜃
-a
-⋅
-b
-=∣
-a
-∣∣
-b
-∣cosθ
-
-Therefore
-
-cos
-⁡
-𝜃
-=
-𝑎
-⃗
-⋅
-𝑏
-⃗
-∣
-𝑎
-⃗
-∣
-∣
-𝑏
-⃗
-∣
-cosθ=
-∣
-a
-∣∣
-b
-∣
-a
-⋅
-b
-	​
-
-
-Substitute values:
-
-cos
-⁡
-𝜃
-=
-−
-8
-14
-21
-cosθ=
-14
-	​
-
-21
-	​
-
-−8
-	​
-
-
+$$
+\vec a = (2,-1,3), \qquad
+\vec b = (1,4,-2)
+$$
+1. Vector lengths
+The length (Euclidean norm) of a vector is
+$$
+|\vec v|=\sqrt{v_1^2+v_2^2+v_3^2}
+$$
+Length of $\vec a$
+$$
+|\vec a|=\sqrt{2^2+(-1)^2+3^2}
+$$
+$$
+=\sqrt{4+1+9}
+$$
+$$
+=\sqrt{14}
+$$
+Length of $\vec b$
+$$
+|\vec b|=\sqrt{1^2+4^2+(-2)^2}
+$$
+$$
+=\sqrt{1+16+4}
+$$
+$$
+=\sqrt{21}
+$$
+2. Normalized vector $\hat a$
+The normalized vector is defined as
+$$
+\hat a=\frac{\vec a}{|\vec a|}
+$$
+Substitute the values:
+$$
+\hat a=\frac{(2,-1,3)}{\sqrt{14}}
+$$
+Thus
+$$
+\hat a=
+\left(
+\frac{2}{\sqrt{14}},
+\frac{-1}{\sqrt{14}},
+\frac{3}{\sqrt{14}}
+\right)
+$$
+3. Dot product and angle between vectors
+The dot product is
+$$
+\vec a \cdot \vec b = a_1 b_1 + a_2 b_2 + a_3 b_3
+$$
+Substitute the values:
+$$
+\vec a \cdot \vec b
+=2\cdot1+(-1)\cdot4+3\cdot(-2)
+$$
+$$
+=2-4-6
+$$
+$$
+=-8
+$$
+Angle between vectors
+The formula for the angle is
+$$
+\vec a \cdot \vec b = |\vec a||\vec b|\cos\theta
+$$
+Solve for $\cos\theta$:
+$$
+\cos\theta=
+\frac{\vec a\cdot\vec b}{|\vec a||\vec b|}
+$$
+Substitute the values:
+$$
+\cos\theta=
+\frac{-8}{\sqrt{14}\sqrt{21}}
+$$
 Since
-
-14
-21
-=
-294
-14
-	​
-
-21
-	​
-
-=
-294
-	​
-
-
+$$
+\sqrt{14}\sqrt{21}=\sqrt{294}
+$$
 we obtain
-
-cos
-⁡
-𝜃
-=
-−
-8
-294
-cosθ=
-294
-	​
-
-−8
-	​
-
-
-Thus
-
-𝜃
-=
-arccos
-⁡
-(
-−
-8
-294
-)
-θ=arccos(
-294
-	​
-
-−8
-	​
-
-)
-5. Cross product
-𝑎
-⃗
-×
-𝑏
-⃗
-=
-∣
-𝑖
-	
-𝑗
-	
-𝑘
-
-
-2
-	
-−
-1
-	
-3
-
-
-1
-	
-4
-	
-−
-2
-∣
-a
-×
-b
-=
-	​
-
-i
-2
-1
-	​
-
-j
-−1
-4
-	​
-
-k
-3
-−2
-	​
-
-	​
-
-
-Expanding determinant:
-
-=
-𝑖
-∣
-−
-1
-	
-3
-
-
-4
-	
-−
-2
-∣
-−
-𝑗
-∣
-2
-	
-3
-
-
-1
-	
-−
-2
-∣
-+
-𝑘
-∣
-2
-	
-−
-1
-
-
-1
-	
-4
-∣
-=i
-	​
-
-−1
-4
-	​
-
-3
-−2
-	​
-
-	​
-
-−j
-	​
-
-2
-1
-	​
-
-3
-−2
-	​
-
-	​
-
-+k
-	​
-
-2
-1
-	​
-
-−1
-4
-	​
-
-	​
-
-
-Compute minors:
-
-(
-−
-1
-)
-(
-−
-2
-)
-−
-(
-3
-)
-(
-4
-)
-=
-−
-10
-(−1)(−2)−(3)(4)=−10
-(
-2
-)
-(
-−
-2
-)
-−
-(
-3
-)
-(
-1
-)
-=
-−
-7
-(2)(−2)−(3)(1)=−7
-(
-2
-)
-(
-4
-)
-−
-(
-−
-1
-)
-(
-1
-)
-=
-9
-(2)(4)−(−1)(1)=9
-
-Result:
-
-𝑎
-⃗
-×
-𝑏
-⃗
-=
-(
-−
-10
-,
- 
-7
-,
- 
-9
-)
-a
-×
-b
-=(−10,7,9)
-6. Area of the parallelogram
-𝐴
-=
-∣
-𝑎
-⃗
-×
-𝑏
-⃗
-∣
-A=∣
-a
-×
-b
-∣
-𝐴
-=
-(
-−
-10
-)
-2
-+
-7
-2
-+
-9
-2
+$$
+\cos\theta=\frac{-8}{\sqrt{294}}
+$$
+Therefore
+$$
+\theta=\arccos\left(\frac{-8}{\sqrt{294}}\right)
+$$
+4. Cross product
+The cross product is calculated using the determinant:
+$$
+\vec a\times\vec b=
+\begin{vmatrix}
+\mathbf i & \mathbf j & \mathbf k \
+2 & -1 & 3 \
+1 & 4 & -2
+\end{vmatrix}
+$$
+Compute each component.
+First component
+$$
+(-1)(-2)-3(4)
+$$
+$$
+=2-12
+$$
+$$
+=-10
+$$
+Second component
+$$
+-(2(-2)-3(1))
+$$
+$$
+= -(-4-3)
+$$
+$$
+=7
+$$
+Third component
+$$
+2(4)-(-1)(1)
+$$
+$$
+=8+1
+$$
+$$
+=9
+$$
+Result
+$$
+\vec a\times\vec b=(-10,7,9)
+$$
+Area of the parallelogram
+The area equals the magnitude of the cross product:
+$$
+A=|\vec a\times\vec b|
+$$
+$$
+=\sqrt{(-10)^2+7^2+9^2}
+$$
+$$
+=\sqrt{100+49+81}
+$$
+$$
+=\sqrt{230}
+$$
+Matrix part
+Matrix:
+$$
 A=
-(−10)
-2
-+7
-2
-+9
-2
-	​
-
-𝐴
-=
-100
-+
-49
-+
-81
-A=
-100+49+81
-	​
-
-𝐴
-=
-230
-A=
-230
-	​
-
-Matrix
-𝐴
-=
-(
-2
-	
-1
-	
-0
-
-
-0
-	
-1
-	
-−
-1
-
-
-1
-	
-0
-	
-1
-)
-A=
-	​
-
-2
-0
-1
-	​
-
-1
-1
-0
-	​
-
-0
-−1
-1
-	​
-
-	​
-
-7. Matrix-vector multiplication
-𝐴
-𝑎
-⃗
-=
-(
-2
-	
-1
-	
-0
-
-
-0
-	
-1
-	
-−
-1
-
-
-1
-	
-0
-	
-1
-)
-(
-2
-
-
-−
-1
-
-
+\begin{pmatrix}
+2 & 1 & 0 \
+0 & 1 & -1 \
+1 & 0 & 1
+\end{pmatrix}
+$$
+5. Calculate $A\vec a$
+$$
+A\vec a=
+\begin{pmatrix}
+2 & 1 & 0 \
+0 & 1 & -1 \
+1 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+2\
+-1\
 3
-)
-A
-a
-=
-	​
-
-2
-0
-1
-	​
-
-1
-1
-0
-	​
-
-0
-−1
-1
-	​
-
-	​
-
-	​
-
-2
-−1
-3
-	​
-
-	​
-
-
-Components:
-
-2
-⋅
-2
-+
-1
-(
-−
-1
-)
-+
-0
-(
-3
-)
-=
-3
-2⋅2+1(−1)+0(3)=3
-0
-(
-2
-)
-+
-1
-(
-−
-1
-)
-+
-(
-−
-1
-)
-(
-3
-)
-=
-−
-4
-0(2)+1(−1)+(−1)(3)=−4
-1
-(
-2
-)
-+
-0
-(
-−
-1
-)
-+
-1
-(
-3
-)
-=
-5
-1(2)+0(−1)+1(3)=5
-
-Result:
-
-𝐴
-𝑎
-⃗
-=
-(
-3
-,
-−
-4
-,
-5
-)
-A
-a
-=(3,−4,5)
-8. Determinant
-det
-⁡
-𝐴
-=
-∣
-2
-	
-1
-	
-0
-
-
-0
-	
-1
-	
-−
-1
-
-
-1
-	
-0
-	
-1
-∣
-detA=
-	​
-
-2
-0
-1
-	​
-
-1
-1
-0
-	​
-
-0
-−1
-1
-	​
-
-	​
-
-
-Expand along first row:
-
-det
-⁡
-𝐴
-=
-2
-∣
-1
-	
-−
-1
-
-
-0
-	
-1
-∣
-−
-1
-∣
-0
-	
-−
-1
-
-
-1
-	
-1
-∣
-detA=2
-	​
-
-1
-0
-	​
-
-−1
-1
-	​
-
-	​
-
-−1
-	​
-
-0
-1
-	​
-
-−1
-1
-	​
-
-	​
-
-
-Minors:
-
-1
-⋅
-1
-−
-(
-−
-1
-)
-⋅
-0
-=
-1
-1⋅1−(−1)⋅0=1
-0
-⋅
-1
-−
-(
-−
-1
-)
-⋅
-1
-=
-1
-0⋅1−(−1)⋅1=1
-
-Thus
-
-det
-⁡
-𝐴
-=
-2
-(
-1
-)
-−
-1
-(
-1
-)
-=
-1
-detA=2(1)−1(1)=1
-9. Orientation
-
-If
-
-det
-⁡
-𝐴
->
-0
-detA>0
-
-the transformation preserves orientation.
-
-If
-
-det
-⁡
-𝐴
-<
-0
-detA<0
-
-orientation is reversed.
-
+\end{pmatrix}
+$$
+Multiply row by column.
+First component
+$$
+2\cdot2+1\cdot(-1)+0\cdot3
+$$
+$$
+=4-1
+$$
+$$
+=3
+$$
+Second component
+$$
+0\cdot2+1\cdot(-1)+(-1)\cdot3
+$$
+$$
+=-1-3
+$$
+$$
+=-4
+$$
+Third component
+$$
+1\cdot2+0\cdot(-1)+1\cdot3
+$$
+$$
+=2+3
+$$
+$$
+=5
+$$
+Result
+$$
+A\vec a=(3,-4,5)
+$$
+6. Determinant of the matrix
+$$
+\det A=
+\begin{vmatrix}
+2 & 1 & 0 \
+0 & 1 & -1 \
+1 & 0 & 1
+\end{vmatrix}
+$$
+Expand along the first row:
+$$
+=2
+\begin{vmatrix}
+1 & -1 \
+0 & 1
+\end{vmatrix}
+-1
+\begin{vmatrix}
+0 & -1 \
+1 & 1
+\end{vmatrix}
++0
+\begin{vmatrix}
+0 & 1 \
+1 & 0
+\end{vmatrix}
+$$
+Compute the minors.
+First minor
+$$
+1\cdot1-(-1)\cdot0
+$$
+$$
+=1
+$$
+Second minor
+$$
+0\cdot1-(-1)\cdot1
+$$
+$$
+=1
+$$
+Substitute:
+$$
+\det A=2(1)-1(1)
+$$
+$$
+=2-1
+$$
+$$
+=1
+$$
+7. Orientation of the transformation
+A linear transformation preserves orientation if
+$$
+\det A > 0
+$$
 Since
-
-det
-⁡
-𝐴
-=
-1
->
-0
-detA=1>0
-
-the transformation preserves orientation
+$$
+\det A = 1 > 0
+$$
+the transformation preserves orientation.
+✅ Final results
+$$
+|\vec a|=\sqrt{14}
+$$
+$$
+|\vec b|=\sqrt{21}
+$$
+$$
+\hat a=
+\left(
+\frac{2}{\sqrt{14}},
+\frac{-1}{\sqrt{14}},
+\frac{3}{\sqrt{14}}
+\right)
+$$
+$$
+\vec a\cdot\vec b=-8
+$$
+$$
+\vec a\times\vec b=(-10,7,9)
+$$
+$$
+A=|\vec a\times\vec b|=\sqrt{230}
+$$
+$$
+A\vec a=(3,-4,5)
+$$
+$$
+\det A=1
+$$
