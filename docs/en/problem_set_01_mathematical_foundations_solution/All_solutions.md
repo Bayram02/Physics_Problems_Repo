@@ -1,425 +1,1151 @@
-Below is a **VS Code–ready Markdown solution** for **Problem 1**.
-You can **copy it directly into `task_01.md`**, and it will render correctly in **VS Code Markdown Preview** because all math uses `$$ ... $$`.
+Problem 1 – Vectors and Linear Transformations
+Given vectors
+𝑎
+⃗
+=
+(
+2
+,
+−
+1
+,
+3
+)
+,
+𝑏
+⃗
+=
+(
+1
+,
+4
+,
+−
+2
+)
+a
+=(2,−1,3),
+b
+=(1,4,−2)
+1. Length of vectors
 
----
+Vector length formula:
 
-# Problem 1 – Vectors and Linear Transformations
+∣
+𝑣
+⃗
+∣
+=
+𝑣
+𝑥
+2
++
+𝑣
+𝑦
+2
++
+𝑣
+𝑧
+2
+∣
+v
+∣=
+v
+x
+2
+	​
 
-## Given vectors
++v
+y
+2
+	​
 
-$$
-\vec a = (2,-1,3), \qquad
-\vec b = (1,4,-2)
-$$
++v
+z
+2
+	​
 
----
+	​
 
-# 1. Lengths of the vectors
+Length of vector 
+𝑎
+⃗
+a
+∣
+𝑎
+⃗
+∣
+=
+2
+2
++
+(
+−
+1
+)
+2
++
+3
+2
+∣
+a
+∣=
+2
+2
++(−1)
+2
++3
+2
+	​
 
-The length of a vector is defined as
+∣
+𝑎
+⃗
+∣
+=
+4
++
+1
++
+9
+∣
+a
+∣=
+4+1+9
+	​
 
-$$
-|\vec v| = \sqrt{v_x^2 + v_y^2 + v_z^2}
-$$
+∣
+𝑎
+⃗
+∣
+=
+14
+∣
+a
+∣=
+14
+	​
 
-### Length of $\vec a$
+Length of vector 
+𝑏
+⃗
+b
+∣
+𝑏
+⃗
+∣
+=
+1
+2
++
+4
+2
++
+(
+−
+2
+)
+2
+∣
+b
+∣=
+1
+2
++4
+2
++(−2)
+2
+	​
 
-$$
-|\vec a|
-========
+∣
+𝑏
+⃗
+∣
+=
+1
++
+16
++
+4
+∣
+b
+∣=
+1+16+4
+	​
 
-\sqrt{2^2 + (-1)^2 + 3^2}
-$$
+∣
+𝑏
+⃗
+∣
+=
+21
+∣
+b
+∣=
+21
+	​
 
-# $$
+2. Normalized vector
 
-\sqrt{4 + 1 + 9}
-$$
+Definition:
 
-# $$
+𝑎
+^
+=
+𝑎
+⃗
+∣
+𝑎
+⃗
+∣
+a
+^
+=
+∣
+a
+∣
+a
+	​
 
-\sqrt{14}
-$$
 
----
+Substitute values:
 
-### Length of $\vec b$
+𝑎
+^
+=
+(
+2
+,
+−
+1
+,
+3
+)
+14
+a
+^
+=
+14
+	​
 
-$$
-|\vec b|
-========
+(2,−1,3)
+	​
 
-\sqrt{1^2 + 4^2 + (-2)^2}
-$$
 
-# $$
+Final result:
 
-\sqrt{1 + 16 + 4}
-$$
+𝑎
+^
+=
+(
+2
+14
+,
+−
+1
+14
+,
+3
+14
+)
+a
+^
+=(
+14
+	​
 
-# $$
+2
+	​
 
-\sqrt{21}
-$$
+,
+14
+	​
 
----
+−1
+	​
 
-# 2. Normalized vector $\hat a$
+,
+14
+	​
 
-The normalized vector is defined as
+3
+	​
 
-$$
-\hat a = \frac{\vec a}{|\vec a|}
-$$
+)
+3. Dot product
 
-Substituting values:
+Formula:
 
-$$
-\hat a
-======
+𝑎
+⃗
+⋅
+𝑏
+⃗
+=
+𝑎
+𝑥
+𝑏
+𝑥
++
+𝑎
+𝑦
+𝑏
+𝑦
++
+𝑎
+𝑧
+𝑏
+𝑧
+a
+⋅
+b
+=a
+x
+	​
 
-\frac{(2,-1,3)}{\sqrt{14}}
-$$
+b
+x
+	​
+
++a
+y
+	​
+
+b
+y
+	​
+
++a
+z
+	​
+
+b
+z
+	​
+
+
+Substitute values:
+
+𝑎
+⃗
+⋅
+𝑏
+⃗
+=
+2
+⋅
+1
++
+(
+−
+1
+)
+⋅
+4
++
+3
+⋅
+(
+−
+2
+)
+a
+⋅
+b
+=2⋅1+(−1)⋅4+3⋅(−2)
+=
+2
+−
+4
+−
+6
+=2−4−6
+=
+−
+8
+=−8
+4. Angle between vectors
+
+Formula:
+
+𝑎
+⃗
+⋅
+𝑏
+⃗
+=
+∣
+𝑎
+⃗
+∣
+∣
+𝑏
+⃗
+∣
+cos
+⁡
+𝜃
+a
+⋅
+b
+=∣
+a
+∣∣
+b
+∣cosθ
 
 Therefore
 
-$$
-\hat a =
-\left(
-\frac{2}{\sqrt{14}},
-\frac{-1}{\sqrt{14}},
-\frac{3}{\sqrt{14}}
-\right)
-$$
+cos
+⁡
+𝜃
+=
+𝑎
+⃗
+⋅
+𝑏
+⃗
+∣
+𝑎
+⃗
+∣
+∣
+𝑏
+⃗
+∣
+cosθ=
+∣
+a
+∣∣
+b
+∣
+a
+⋅
+b
+	​
 
----
-
-# 3. Dot product and angle between vectors
-
-### Dot product
-
-The dot product is
-
-$$
-\vec a \cdot \vec b
-===================
-
-a_x b_x + a_y b_y + a_z b_z
-$$
-
-Substitute values:
-
-# $$
-
-2\cdot1 + (-1)\cdot4 + 3\cdot(-2)
-$$
-
-# $$
-
-2 -4 -6
-$$
-
-# $$
-
--8
-$$
-
----
-
-### Angle between vectors
-
-The formula for the angle between vectors is
-
-$$
-\vec a \cdot \vec b = |\vec a||\vec b|\cos\theta
-$$
-
-Thus
-
-$$
-\cos\theta
-==========
-
-\frac{\vec a\cdot\vec b}{|\vec a||\vec b|}
-$$
 
 Substitute values:
 
-$$
-\cos\theta =
-\frac{-8}{\sqrt{14}\sqrt{21}}
-$$
+cos
+⁡
+𝜃
+=
+−
+8
+14
+21
+cosθ=
+14
+	​
+
+21
+	​
+
+−8
+	​
+
 
 Since
 
-$$
-\sqrt{14}\sqrt{21} = \sqrt{294}
-$$
+14
+21
+=
+294
+14
+	​
+
+21
+	​
+
+=
+294
+	​
+
 
 we obtain
 
-$$
-\cos\theta =
-\frac{-8}{\sqrt{294}}
-$$
+cos
+⁡
+𝜃
+=
+−
+8
+294
+cosθ=
+294
+	​
 
-Therefore
+−8
+	​
 
-$$
-\theta =
-\arccos
-\left(
-\frac{-8}{\sqrt{294}}
-\right)
-$$
-
----
-
-# 4. Cross product
-
-The cross product is computed using the determinant:
-
-$$
-\vec a \times \vec b =
-\begin{vmatrix}
-\mathbf i & \mathbf j & \mathbf k \
-2 & -1 & 3 \
-1 & 4 & -2
-\end{vmatrix}
-$$
-
-Expand the determinant:
-
-# $$
-
-\mathbf i
-\begin{vmatrix}
--1 & 3 \
-4 & -2
-\end{vmatrix}
--------------
-
-\mathbf j
-\begin{vmatrix}
-2 & 3 \
-1 & -2
-\end{vmatrix}
-+
-\mathbf k
-\begin{vmatrix}
-2 & -1 \
-1 & 4
-\end{vmatrix}
-$$
-
----
-
-### Calculate determinants
-
-First:
-
-$$
-(-1)(-2) - (3)(4) = 2 - 12 = -10
-$$
-
-Second:
-
-$$
-(2)(-2) - (3)(1) = -4 - 3 = -7
-$$
-
-Third:
-
-$$
-(2)(4) - (-1)(1) = 8 + 1 = 9
-$$
-
----
-
-### Final result
-
-$$
-\vec a \times \vec b =
-(-10,,7,,9)
-$$
-
-(Note the minus sign before the $\mathbf j$ term.)
-
----
-
-# 5. Area of the parallelogram
-
-The area of the parallelogram spanned by the vectors is
-
-$$
-A = |\vec a \times \vec b|
-$$
-
-Compute the magnitude:
-
-# $$
-
-\sqrt{(-10)^2 + 7^2 + 9^2}
-$$
-
-# $$
-
-\sqrt{100 + 49 + 81}
-$$
-
-# $$
-
-\sqrt{230}
-$$
-
----
-
-# Matrix transformation
-
-Given matrix
-
-$$
-A =
-\begin{pmatrix}
-2 & 1 & 0 \
-0 & 1 & -1 \
-1 & 0 & 1
-\end{pmatrix}
-$$
-
----
-
-# 6. Calculate $A\vec a$
-
-Multiply the matrix by vector $\vec a=(2,-1,3)$.
-
-First component:
-
-$$
-2\cdot2 + 1\cdot(-1) + 0\cdot3
-==============================
-
-# 4-1
-
-3
-$$
-
-Second component:
-
-$$
-0\cdot2 + 1\cdot(-1) + (-1)\cdot3
-=================================
-
-# -1-3
-
--4
-$$
-
-Third component:
-
-$$
-1\cdot2 + 0\cdot(-1) + 1\cdot3
-==============================
-
-# 2+3
-
-5
-$$
 
 Thus
 
-$$
-A\vec a =
-(3,-4,5)
-$$
+𝜃
+=
+arccos
+⁡
+(
+−
+8
+294
+)
+θ=arccos(
+294
+	​
 
----
+−8
+	​
 
-# 7. Determinant of $A$
+)
+5. Cross product
+𝑎
+⃗
+×
+𝑏
+⃗
+=
+∣
+𝑖
+	
+𝑗
+	
+𝑘
 
-$$
-\det A =
-\begin{vmatrix}
-2 & 1 & 0 \
-0 & 1 & -1 \
-1 & 0 & 1
-\end{vmatrix}
-$$
-
-Expand along the first row:
-
-# $$
 
 2
-\begin{vmatrix}
-1 & -1 \
-0 & 1
-\end{vmatrix}
--------------
+	
+−
+1
+	
+3
+
 
 1
-\begin{vmatrix}
-0 & -1 \
-1 & 1
-\end{vmatrix}
+	
+4
+	
+−
+2
+∣
+a
+×
+b
+=
+	​
+
+i
+2
+1
+	​
+
+j
+−1
+4
+	​
+
+k
+3
+−2
+	​
+
+	​
+
+
+Expanding determinant:
+
+=
+𝑖
+∣
+−
+1
+	
+3
+
+
+4
+	
+−
+2
+∣
+−
+𝑗
+∣
+2
+	
+3
+
+
+1
+	
+−
+2
+∣
 +
-0
-\begin{vmatrix}
-0 & 1 \
-1 & 0
-\end{vmatrix}
-$$
+𝑘
+∣
+2
+	
+−
+1
+
+
+1
+	
+4
+∣
+=i
+	​
+
+−1
+4
+	​
+
+3
+−2
+	​
+
+	​
+
+−j
+	​
+
+2
+1
+	​
+
+3
+−2
+	​
+
+	​
+
++k
+	​
+
+2
+1
+	​
+
+−1
+4
+	​
+
+	​
+
 
 Compute minors:
 
-First:
+(
+−
+1
+)
+(
+−
+2
+)
+−
+(
+3
+)
+(
+4
+)
+=
+−
+10
+(−1)(−2)−(3)(4)=−10
+(
+2
+)
+(
+−
+2
+)
+−
+(
+3
+)
+(
+1
+)
+=
+−
+7
+(2)(−2)−(3)(1)=−7
+(
+2
+)
+(
+4
+)
+−
+(
+−
+1
+)
+(
+1
+)
+=
+9
+(2)(4)−(−1)(1)=9
 
-$$
-1\cdot1 - (-1)\cdot0 = 1
-$$
+Result:
 
-Second:
+𝑎
+⃗
+×
+𝑏
+⃗
+=
+(
+−
+10
+,
+ 
+7
+,
+ 
+9
+)
+a
+×
+b
+=(−10,7,9)
+6. Area of the parallelogram
+𝐴
+=
+∣
+𝑎
+⃗
+×
+𝑏
+⃗
+∣
+A=∣
+a
+×
+b
+∣
+𝐴
+=
+(
+−
+10
+)
+2
++
+7
+2
++
+9
+2
+A=
+(−10)
+2
++7
+2
++9
+2
+	​
 
-$$
-0\cdot1 - (-1)\cdot1 = 1
-$$
+𝐴
+=
+100
++
+49
++
+81
+A=
+100+49+81
+	​
+
+𝐴
+=
+230
+A=
+230
+	​
+
+Matrix
+𝐴
+=
+(
+2
+	
+1
+	
+0
+
+
+0
+	
+1
+	
+−
+1
+
+
+1
+	
+0
+	
+1
+)
+A=
+	​
+
+2
+0
+1
+	​
+
+1
+1
+0
+	​
+
+0
+−1
+1
+	​
+
+	​
+
+7. Matrix-vector multiplication
+𝐴
+𝑎
+⃗
+=
+(
+2
+	
+1
+	
+0
+
+
+0
+	
+1
+	
+−
+1
+
+
+1
+	
+0
+	
+1
+)
+(
+2
+
+
+−
+1
+
+
+3
+)
+A
+a
+=
+	​
+
+2
+0
+1
+	​
+
+1
+1
+0
+	​
+
+0
+−1
+1
+	​
+
+	​
+
+	​
+
+2
+−1
+3
+	​
+
+	​
+
+
+Components:
+
+2
+⋅
+2
++
+1
+(
+−
+1
+)
++
+0
+(
+3
+)
+=
+3
+2⋅2+1(−1)+0(3)=3
+0
+(
+2
+)
++
+1
+(
+−
+1
+)
++
+(
+−
+1
+)
+(
+3
+)
+=
+−
+4
+0(2)+1(−1)+(−1)(3)=−4
+1
+(
+2
+)
++
+0
+(
+−
+1
+)
++
+1
+(
+3
+)
+=
+5
+1(2)+0(−1)+1(3)=5
+
+Result:
+
+𝐴
+𝑎
+⃗
+=
+(
+3
+,
+−
+4
+,
+5
+)
+A
+a
+=(3,−4,5)
+8. Determinant
+det
+⁡
+𝐴
+=
+∣
+2
+	
+1
+	
+0
+
+
+0
+	
+1
+	
+−
+1
+
+
+1
+	
+0
+	
+1
+∣
+detA=
+	​
+
+2
+0
+1
+	​
+
+1
+1
+0
+	​
+
+0
+−1
+1
+	​
+
+	​
+
+
+Expand along first row:
+
+det
+⁡
+𝐴
+=
+2
+∣
+1
+	
+−
+1
+
+
+0
+	
+1
+∣
+−
+1
+∣
+0
+	
+−
+1
+
+
+1
+	
+1
+∣
+detA=2
+	​
+
+1
+0
+	​
+
+−1
+1
+	​
+
+	​
+
+−1
+	​
+
+0
+1
+	​
+
+−1
+1
+	​
+
+	​
+
+
+Minors:
+
+1
+⋅
+1
+−
+(
+−
+1
+)
+⋅
+0
+=
+1
+1⋅1−(−1)⋅0=1
+0
+⋅
+1
+−
+(
+−
+1
+)
+⋅
+1
+=
+1
+0⋅1−(−1)⋅1=1
 
 Thus
 
-$$
-\det A = 2(1) - 1(1) = 1
-$$
+det
+⁡
+𝐴
+=
+2
+(
+1
+)
+−
+1
+(
+1
+)
+=
+1
+detA=2(1)−1(1)=1
+9. Orientation
 
----
+If
 
-# 8. Orientation of the transformation
+det
+⁡
+𝐴
+>
+0
+detA>0
 
-The orientation of a linear transformation depends on the sign of the determinant.
+the transformation preserves orientation.
 
-* If
-  $$
-  \det A > 0
-  $$
-  orientation is preserved.
+If
 
-* If
-  $$
-  \det A < 0
-  $$
-  orientation is reversed.
+det
+⁡
+𝐴
+<
+0
+detA<0
+
+orientation is reversed.
 
 Since
 
-$$
-\det A = 1 > 0
-$$
+det
+⁡
+𝐴
+=
+1
+>
+0
+detA=1>0
 
-the transformation **preserves orientation**.
-
----
-
-If you want, I can also generate:
-
-* **Problem 2–10 fully solved in the same VS Code Markdown style**
-* **HTML/JS templates for problems 6–9**
-* **clean repo-ready files (`task_01.md`, `task_02.md`, …)** so you can paste them directly into your repository.
+the transformation preserves orientation
