@@ -1,12 +1,16 @@
-
-
-
+Below is a VS Code–ready Markdown solution template for Problem 1.
+•	Uses $$ math blocks (KaTeX/MathJax compatible).
+•	Renders correctly in VS Code Markdown Preview.
+•	Shows all calculation steps, which your course requires.
+You can paste this directly into task_01.md.
+________________________________________
 Problem 1 – Vectors and Linear Transformations
 Given vectors
 $$
 \vec a = (2,-1,3), \qquad
 \vec b = (1,4,-2)
 $$
+________________________________________
 1. Vector lengths
 The length (Euclidean norm) of a vector is
 $$
@@ -22,6 +26,7 @@ $$
 $$
 =\sqrt{14}
 $$
+________________________________________
 Length of $\vec b$
 $$
 |\vec b|=\sqrt{1^2+4^2+(-2)^2}
@@ -32,6 +37,7 @@ $$
 $$
 =\sqrt{21}
 $$
+________________________________________
 2. Normalized vector $\hat a$
 The normalized vector is defined as
 $$
@@ -50,6 +56,7 @@ $$
 \frac{3}{\sqrt{14}}
 \right)
 $$
+________________________________________
 3. Dot product and angle between vectors
 The dot product is
 $$
@@ -66,6 +73,7 @@ $$
 $$
 =-8
 $$
+________________________________________
 Angle between vectors
 The formula for the angle is
 $$
@@ -93,6 +101,7 @@ Therefore
 $$
 \theta=\arccos\left(\frac{-8}{\sqrt{294}}\right)
 $$
+________________________________________
 4. Cross product
 The cross product is calculated using the determinant:
 $$
@@ -114,6 +123,7 @@ $$
 $$
 =-10
 $$
+________________________________________
 Second component
 $$
 -(2(-2)-3(1))
@@ -124,6 +134,7 @@ $$
 $$
 =7
 $$
+________________________________________
 Third component
 $$
 2(4)-(-1)(1)
@@ -134,10 +145,12 @@ $$
 $$
 =9
 $$
+________________________________________
 Result
 $$
 \vec a\times\vec b=(-10,7,9)
 $$
+________________________________________
 Area of the parallelogram
 The area equals the magnitude of the cross product:
 $$
@@ -152,6 +165,7 @@ $$
 $$
 =\sqrt{230}
 $$
+________________________________________
 Matrix part
 Matrix:
 $$
@@ -162,6 +176,7 @@ A=
 1 & 0 & 1
 \end{pmatrix}
 $$
+________________________________________
 5. Calculate $A\vec a$
 $$
 A\vec a=
@@ -187,6 +202,7 @@ $$
 $$
 =3
 $$
+________________________________________
 Second component
 $$
 0\cdot2+1\cdot(-1)+(-1)\cdot3
@@ -197,6 +213,7 @@ $$
 $$
 =-4
 $$
+________________________________________
 Third component
 $$
 1\cdot2+0\cdot(-1)+1\cdot3
@@ -207,10 +224,12 @@ $$
 $$
 =5
 $$
+________________________________________
 Result
 $$
 A\vec a=(3,-4,5)
 $$
+________________________________________
 6. Determinant of the matrix
 $$
 \det A=
@@ -263,6 +282,7 @@ $$
 $$
 =1
 $$
+________________________________________
 7. Orientation of the transformation
 A linear transformation preserves orientation if
 $$
@@ -273,6 +293,7 @@ $$
 \det A = 1 > 0
 $$
 the transformation preserves orientation.
+________________________________________
 ✅ Final results
 $$
 |\vec a|=\sqrt{14}
@@ -303,3 +324,9 @@ $$
 $$
 \det A=1
 $$
+Transformation preserves orientation.
+________________________________________
+If you want, I can also:
+•	generate Problem 2–10 solutions in the same VS Code format,
+•	and create HTML/JS visualizations required in Problems 6–9 so they run directly in your repo.
+
