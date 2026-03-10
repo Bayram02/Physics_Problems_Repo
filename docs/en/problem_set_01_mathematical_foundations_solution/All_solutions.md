@@ -1,13 +1,3 @@
-Below is a **VS Code–ready Markdown solution template for Problem 1**.
-
-* Uses `$$` math blocks (KaTeX/MathJax compatible).
-* Renders correctly in **VS Code Markdown Preview**.
-* Shows **all calculation steps**, which your course requires.
-
-You can paste this directly into `task_01.md`.
-
----
-
 # Problem 1 – Vectors and Linear Transformations
 
 ## Given vectors
@@ -464,8 +454,3 @@ $$
 Transformation **preserves orientation**.
 
 ---
-
-If you want, I can also:
-
-* generate **Problem 2–10 solutions in the same VS Code format**,
-* and create **HTML/JS visualizations** required in Problems **6–9** so they run directly in your repo.
