@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Problem Set 02 — Mechanics & Kinematics</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=JetBrains+Mono:wght@400;600&family=Lato:wght@300;400;700&display=swap');
+  :root{
+    --bg:#080b10; --surface:#0d1218; --border:#161f2c;
+    --gold:#f0c040; --cyan:#22d3ee; --green:#34d399;
+    --pink:#f472b6; --orange:#f97316; --purple:#c084fc;
+    --text:#e8eaf0; --muted:#6b7a8d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Lato',sans-serif;min-height:100vh;overflow-x:hidden}
+
+  /* HERO */
+  .hero{
+    min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:60px 24px;position:relative;
+    background:radial-gradient(ellipse at 30% 40%, rgba(240,192,64,.06) 0%, transparent 60%),
+               radial-gradient(ellipse at 70% 60%, rgba(34,211,238,.05) 0%, transparent 55%);
+  }
+  .hero::before{
+    content:'';position:absolute;inset:0;
+    background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Ccircle fill='%23161f2c' cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/svg%3E") repeat;
+    opacity:0.5; pointer-events:none;
+  }
+  .course-tag{
+    font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:5px;
+    text-transform:uppercase;color:var(--gold);margin-bottom:24px;
+    background:rgba(240,192,64,.1);border:1px solid rgba(240,192,64,.2);
+    padding:6px 18px;border-radius:100px;display:inline-block;
+  }
+  .hero h1{
+    font-family:'Playfair Display',serif;font-size:clamp(36px,7vw,80px);
+    font-weight:900;line-height:1.05;margin-bottom:8px;
+  }
+  .hero h1 span.top{
+    background:linear-gradient(135deg,#f0c040,#fffde7);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    display:block;
+  }
+  .hero h1 span.bot{
+    background:linear-gradient(135deg,#22d3ee,#e0f7fa);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+    display:block;font-style:italic;font-size:0.65em;margin-top:4px;
+  }
+  .hero-sub{color:var(--muted);font-size:18px;margin-top:20px;font-weight:300;max-width:560px;line-height:1.7}
+  .hero-meta{
+    display:flex;gap:24px;margin-top:32px;flex-wrap:wrap;justify-content:center;
+  }
+  .meta-pill{
+    font-family:'JetBrains Mono',monospace;font-size:12px;padding:8px 18px;
+    border-radius:100px;border:1px solid var(--border);background:var(--surface);color:var(--muted);
+  }
+  .scroll-hint{
+    position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+    font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted);letter-spacing:2px;
+    text-transform:uppercase;animation:bob 2s ease-in-out infinite;
+  }
+  @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+
+  /* MANIFESTO */
+  .manifesto{
+    max-width:800px;margin:0 auto;padding:80px 24px;
+    border-top:1px solid var(--border);
+  }
+  .manifesto h2{
+    font-family:'Playfair Display',serif;font-size:28px;color:var(--gold);
+    margin-bottom:20px;text-align:center;
+  }
+  .manifesto blockquote{
+    background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--gold);
+    border-radius:0 12px 12px 0;padding:24px 28px;line-height:1.9;color:#b0bbc8;
+    font-size:15px;font-style:italic;
+  }
+
+  /* PROBLEMS GRID */
+  .problems{padding:0 24px 100px;max-width:1100px;margin:0 auto}
+  .section-title{
+    font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:4px;
+    text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:48px;
+    display:flex;align-items:center;gap:16px;justify-content:center;
+  }
+  .section-title::before,.section-title::after{content:'';flex:1;max-width:120px;height:1px;background:var(--border)}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+
+  .card{
+    background:var(--surface);border:1px solid var(--border);border-radius:16px;
+    padding:28px;text-decoration:none;color:inherit;
+    transition:transform .25s,border-color .25s,box-shadow .25s;
+    position:relative;overflow:hidden;display:block;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 40px rgba(0,0,0,.5);
+  }
+  .card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:16px 16px 0 0}
+  .card.gold::before{background:linear-gradient(90deg,var(--gold),transparent)} .card.gold:hover{border-color:rgba(240,192,64,.35)}
+  .card.cyan::before{background:linear-gradient(90deg,var(--cyan),transparent)} .card.cyan:hover{border-color:rgba(34,211,238,.35)}
+  .card.green::before{background:linear-gradient(90deg,var(--green),transparent)} .card.green:hover{border-color:rgba(52,211,153,.35)}
+  .card.pink::before{background:linear-gradient(90deg,var(--pink),transparent)} .card.pink:hover{border-color:rgba(244,114,182,.35)}
+  .card.orange::before{background:linear-gradient(90deg,var(--orange),transparent)} .card.orange:hover{border-color:rgba(249,115,22,.35)}
+  .card.purple::before{background:linear-gradient(90deg,var(--purple),transparent)} .card.purple:hover{border-color:rgba(192,132,252,.35)}
+  .card.blue::before{background:linear-gradient(90deg,#60a5fa,transparent)} .card.blue:hover{border-color:rgba(96,165,250,.35)}
+
+  .card-num{
+    font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:3px;
+    text-transform:uppercase;margin-bottom:14px;opacity:.6;
+  }
+  .card-title{
+    font-family:'Playfair Display',serif;font-size:22px;font-weight:700;
+    line-height:1.25;margin-bottom:12px;
+  }
+  .card-desc{font-size:14px;color:#8a95a8;line-height:1.7;margin-bottom:20px}
+  .card-topics{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
+  .topic{
+    font-family:'JetBrains Mono',monospace;font-size:10px;
+    padding:3px 9px;border-radius:100px;
+    background:rgba(255,255,255,.05);color:var(--muted);border:1px solid var(--border);
+  }
+  .card-link{
+    display:flex;align-items:center;gap:8px;
+    font-family:'JetBrains Mono',monospace;font-size:12px;
+    font-weight:600;letter-spacing:1px;text-transform:uppercase;
+    text-decoration:none;
+    transition:gap .2s;
+  }
+  .card.gold .card-link{color:var(--gold)}
+  .card.cyan .card-link{color:var(--cyan)}
+  .card.green .card-link{color:var(--green)}
+  .card.pink .card-link{color:var(--pink)}
+  .card.orange .card-link{color:var(--orange)}
+  .card.purple .card-link{color:var(--purple)}
+  .card.blue .card-link{color:#60a5fa}
+  .card:hover .card-link{gap:14px}
+
+  .card-icon{
+    position:absolute;right:24px;top:28px;font-size:32px;opacity:.2;
+    transition:opacity .25s,transform .25s;
+  }
+  .card:hover .card-icon{opacity:.4;transform:scale(1.1) rotate(-5deg)}
+
+  /* BIG COMBINED CARD */
+  .card.combined{grid-column:1/-1}
+  @media(max-width:640px){.card.combined{grid-column:1}}
+
+  /* FOOTER */
+  footer{
+    text-align:center;padding:40px 24px;border-top:1px solid var(--border);
+    font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--muted);letter-spacing:1px;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="course-tag">Problem Set 02 · Mechanics & Kinematics</div>
+  <h1>
+    <span class="top">Mechanics I</span>
+    <span class="bot">Kinematics</span>
+  </h1>
+  <p class="hero-sub">Ten interactive problems — from uniform motion to planetary retrograde orbits. Each solution includes derivations, formulas, and live visualizations.</p>
+  <div class="hero-meta">
+    <span class="meta-pill">10 Problems</span>
+    <span class="meta-pill">Interactive Charts</span>
+    <span class="meta-pill">HTML Animations</span>
+    <span class="meta-pill">Step-by-Step Derivations</span>
+  </div>
+  <div class="scroll-hint">↓ scroll to explore ↓</div>
+</div>
+
+<div class="manifesto">
+  <h2>Course Philosophy</h2>
+  <blockquote>
+    This course is not about solving lists of tasks, but about building your own understanding of physics through systematic work with problems. The repository is your personal textbook — a record of how you analyze physical models, interpret results, and organize knowledge. Tasks serve as tools for thinking: their goal is not to obtain a number, but to develop a reasoning process you can reproduce independently.
+  </blockquote>
+</div>
+
+<div class="problems">
+  <div class="section-title">Solutions</div>
+  <div class="grid">
+
+    <a href="problem_01_kinematics.html" class="card gold">
+      <div class="card-icon">📐</div>
+      <div class="card-num">Problem 01</div>
+      <div class="card-title">Uniform & Accelerated Motion</div>
+      <div class="card-desc">Derives v(t) and a(t) from x(t). Calculates stopping time, max displacement. Interactive sliders let you explore all parameters.</div>
+      <div class="card-topics">
+        <span class="topic">Derivatives</span>
+        <span class="topic">v(t) = v₀ + at</span>
+        <span class="topic">Stopping time</span>
+        <span class="topic">Chart.js</span>
+      </div>
+      <span class="card-link">Open Solution →</span>
+    </a>
+
+    <a href="problem_02_projectile.html" class="card cyan">
+      <div class="card-icon">🎯</div>
+      <div class="card-num">Problem 02</div>
+      <div class="card-title">Projectile Motion</div>
+      <div class="card-desc">Full derivation of flight equations. Formulas for time of flight, max height, and range. Multi-angle trajectory comparison. Why 45° is optimal.</div>
+      <div class="card-topics">
+        <span class="topic">2D motion</span>
+        <span class="topic">Parabola</span>
+        <span class="topic">sin(2α)</span>
+        <span class="topic">Multi-trajectory</span>
+      </div>
+      <span class="card-link">Open Solution →</span>
+    </a>
+
+    <a href="problem_03_04_05_parametric_circular_elliptical.html" class="card purple">
+      <div class="card-icon">🌀</div>
+      <div class="card-num">Problems 03 · 04 · 05</div>
+      <div class="card-title">Parametric, Circular & Elliptical</div>
+      <div class="card-desc">Eliminate parameter t from x=2t², y=3t³. Animated circular motion with centripetal proof. Elliptical motion showing non-constant speed.</div>
+      <div class="card-topics">
+        <span class="topic">Parametric curves</span>
+        <span class="topic">Centripetal a = −ω²r</span>
+        <span class="topic">Ellipse</span>
+        <span class="topic">Canvas animation</span>
+      </div>
+      <span class="card-link">Open Solution →</span>
+    </a>
+
+    <a href="problem_06_cycloid.html" class="card orange">
+      <div class="card-icon">⚙️</div>
+      <div class="card-num">Problem 06</div>
+      <div class="card-title">Cycloid — Rolling Circle</div>
+      <div class="card-desc">Derives velocity and acceleration of a rim point. Shows the point stops at ground contact. Full HTML animation with rolling circle, trace, and vectors.</div>
+      <div class="card-topics">
+        <span class="topic">Cycloid</span>
+        <span class="topic">|v| = 2Rω·|sin(ωt/2)|</span>
+        <span class="topic">Live animation</span>
+        <span class="topic">v & a vectors</span>
+      </div>
+      <span class="card-link">Open Solution →</span>
+    </a>
+
+    <a href="problem_07_08_09_10_advanced.html" class="card green combined">
+      <div class="card-icon">🪐</div>
+      <div class="card-num">Problems 07 · 08 · 09 · 10</div>
+      <div class="card-title">2D Motion · Relative Motion · Geocentric Orbits · Numerical Methods</div>
+      <div class="card-desc">Four problems in one file. P7: parabolic 2D trajectory with vectors. P8: relative motion in three reference frames. P9: Earth–Mars retrograde loops animated. P10: finite difference approximation vs analytical, with error analysis table.</div>
+      <div class="card-topics">
+        <span class="topic">v = v₀ + at</span>
+        <span class="topic">Relative velocity</span>
+        <span class="topic">Reference frames</span>
+        <span class="topic">Retrograde motion</span>
+        <span class="topic">Finite differences</span>
+        <span class="topic">Error analysis</span>
+      </div>
+      <span class="card-link">Open Solution →</span>
+    </a>
+
+  </div>
+</div>
+
+<footer>
+  Physics Problem Set 02 · Mechanics & Kinematics · Interactive Solutions
+</footer>
+
+</body>
+</html>
