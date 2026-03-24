@@ -93,8 +93,6 @@ This is a **parabola** opening downward — the trajectory of every projectile.
 ---
 
 ## Visualization
-
-> 🎬 **See the interactive version:** `problem_02_projectile.html`
 > Adjust $v_0$ and $\alpha$ live. Toggle multiple angles to compare trajectories and verify the 30°/60° symmetry.
 
 ### Summary table — different angles (v₀ = 20 m/s)

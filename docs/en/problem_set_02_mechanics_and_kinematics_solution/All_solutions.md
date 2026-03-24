@@ -1,9 +1,6 @@
 # Problem Set 02 — Mechanics I: Kinematics
 ### Complete Solutions Notebook
 
-> **How to read this file in VS Code:**
-> Press `Ctrl+Shift+V` to open the Markdown Preview. Install the extension **"Markdown All in One"** by Yu Zhang so that all `$...$` math formulas render as proper equations.
-
 ---
 
 # Problem 1 — Uniform and Uniformly Accelerated Motion
