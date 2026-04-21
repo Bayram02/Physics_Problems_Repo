@@ -1,9 +1,5 @@
 # Problem 2 — Projectile Motion
 
-> A body is launched with initial speed $v_0$ at angle $\alpha$ above the horizontal. No air resistance.
-
----
-
 ## Part 1 — Equations of Motion
 
 ### Decompose initial velocity
