@@ -99,14 +99,4 @@ $$\boxed{R_{eq} = \frac{50}{3}\ \Omega \approx 16.7\ \Omega}$$
 
 ---
 
-## How to explain to the teacher
 
-> *"I identified the structure of the circuit — 7 resistors, all 10 Ω.*
->
-> *First I simplified the middle and right branches — each has two resistors in series, giving 20 Ω each.*
->
-> *Then I combined those two 20 Ω branches in parallel — giving 10 Ω.*
->
-> *Then R1 in series with that gives 20 Ω. R2 in parallel with 20 Ω gives 20/3 Ω.*
->
-> *Finally R7 in series gives the total equivalent resistance of 50/3 ≈ 16.7 Ω."*
