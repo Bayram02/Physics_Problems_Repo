@@ -113,14 +113,3 @@ $$\boxed{\mathcal{E}_0 = NBS\omega}$$
 
 ---
 
-## How to explain to the teacher
-
-> *"A rotating loop in a magnetic field experiences a continuously changing flux. By Faraday's law — $\mathcal{E} = -d\Phi/dt$ — this produces a sinusoidal EMF.*
->
-> *The flux is $\Phi = NBS\cos(\omega t)$ — maximum when the loop faces the field.*
->
-> *Differentiating gives $\mathcal{E} = NBS\omega\sin(\omega t)$ — the EMF is 90 degrees out of phase with the flux.*
->
-> *The amplitude $\mathcal{E}_0 = NBS\omega$ is proportional to the rotation speed. This is exactly how AC generators work — the faster the rotation, the higher the voltage.*
->
-> *Physically — the rotating wire cuts through magnetic field lines, and the Lorentz force on free electrons drives the current."*
